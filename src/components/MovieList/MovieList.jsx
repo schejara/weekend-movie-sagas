@@ -1,8 +1,16 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 function MovieList() {
+  const history = useHistory()
+
+  const handleNext = () => {
+    history.push('/MovieDetails')
+  }
+
 
   const dispatch = useDispatch();
   const movies = useSelector(store => store.movies);
@@ -24,7 +32,9 @@ function MovieList() {
           );
         })}
       </section>
+      <button onClick = {handleNext}> To Details</button>
     </main>
+    
   );
 }
 
