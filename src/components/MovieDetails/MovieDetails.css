@@ -1,0 +1,36 @@
+.description{
+    min-height: 80px; /* Ensures equal height */
+    width: 400px;
+    margin-top: 10px;
+    margin-left: 300px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
+    font-size: 8pt;
+    background-color: aliceblue; 
+    text-wrap: 50px; 
+    color: white; 
+    background-color: rgb(78, 158, 164);
+}
+.image{
+    height: 180px;
+    width: 180px;
+}
+h3{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    
+}
+h2{
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+button {
+    background-color: rgb(33, 176, 176);
+    color: white;
+}
+.movie{
+    background-color: rgba(93, 156, 156, 0.344);
+}
+ul{
+    font-size: 10pt;
+}

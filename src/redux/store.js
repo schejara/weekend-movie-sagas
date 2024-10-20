@@ -23,9 +23,6 @@ function* getMovieDetails(action) {
   }
 }
 
-
-
-
 function* fetchAllMovies() {
   try {
     // Get the movies:
@@ -78,7 +75,6 @@ const storeInstance = createStore(
     movies,
     genres,
     selectedMovie,
-   
   }),
   // Add sagaMiddleware to our store
   applyMiddleware(sagaMiddleware, logger),

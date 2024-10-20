@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useLocation } from 'react-router-dom';
+import "./MovieDetails.css"
 
 const MovieDetails = () => {
     const dispatch = useDispatch();
@@ -23,12 +24,12 @@ const MovieDetails = () => {
     };
 
     return (
-        <div data-testid="movieDetails"> 
+        <div data-testid="movieDetails" className='movie'> 
             {movie ? (
                 <>
-                    <h1>{movie.title}</h1> 
-                    <img src={movie.poster} alt={movie.title} />
-                    <p>{movie.description}</p> 
+                    <h2>{movie.title}</h2> 
+                    <img className='image' src={movie.poster} alt={movie.title} />
+                    <div className = "description">{movie.description}</div> 
                     <h3>Genres:</h3> 
                     <ul>
                         {movie.genres?.map((genre, index) => (
