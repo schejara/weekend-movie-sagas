@@ -8,7 +8,7 @@
     font-size: 8pt;
     background-color: aliceblue; 
     text-wrap: 50px; 
-    color: white; 
+    color: rgba(15, 14, 14, 0.571); 
     background-color: rgb(33, 176, 176);
 }
 .image{
@@ -19,24 +19,24 @@
     margin-top: 5px;
     margin-bottom: 10px;
     font-family: 'Times New Roman', Times, serif;
-    color: rgb(31, 129, 129); 
+    color: rgb(15, 14, 14, 0.912); 
 }   
 
 h2{
     margin-top: -15px;
     margin-bottom: 10px;
 font-family: 'Times New Roman', Times, serif;
-color: rgba(8, 127, 127); 
+color: rgba(15, 14, 14, 0.912); 
 }
 button {
     background-color: rgb(33, 176, 176);
-    color: rgb(255, 255, 255);
+    color: rgb(15, 14, 14, 0.571);
 }
 .movie{
     background-color: rgba(188, 216, 216, 0.187);
 }
 ul{
     font-size: 10pt;
-     color: rgb(8, 127, 127);
+     color: rgb(15, 14, 14, 0.912);
      list-style-type: none; 
 }
