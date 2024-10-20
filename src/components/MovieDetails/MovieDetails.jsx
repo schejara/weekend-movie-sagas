@@ -30,7 +30,7 @@ const MovieDetails = () => {
                     <h2>{movie.title}</h2> 
                     <img className='image' src={movie.poster} alt={movie.title} />
                     <div className = "description">{movie.description}</div> 
-                    <h3>Genres:</h3> 
+                    <h3 className='title'>Genres:</h3> 
                     <ul>
                         {movie.genres?.map((genre, index) => (
                             <li key={index}>{genre}</li> 
