@@ -2,6 +2,34 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool')
 
+router.get('/:id', (req, res) => {
+  const movieId = req.params.id;
+  console.log('server movie id', movieId);
+  const query = `
+      SELECT movies.id, movies.description, movies.poster, movies.title, 
+      array_agg(genres.name) AS genres 
+      FROM "movies"
+      JOIN "movies_genres" ON movies.id = movies_genres.movie_id
+      JOIN "genres" ON genres.id = movies_genres.genre_id 
+      WHERE movies.id = $1 
+      GROUP BY movies.id;`;
+
+  pool.query(query, [movieId])
+      .then(result => {
+          if (result.rows.length) {
+              res.send(result.rows[0]); // Send back the first row
+          } else {
+              res.sendStatus(404); // Movie not found
+          }
+      })
+      .catch(err => {
+          console.log('ERROR: Get movie details', err);
+          res.sendStatus(500);
+      });
+});
+
+
+
 router.get('/', (req, res) => {
   const query = `
     SELECT * FROM "movies"
